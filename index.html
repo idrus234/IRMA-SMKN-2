@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRMA SMKN 2 Sukabumi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #a8d5a3, #f5f5dc);
+      color: #2e7d32;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      height: 320px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      margin-bottom: 50px;
+    }
+    .header-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .header-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+      transition: filter 0.4s ease;
+    }
+    .header-container img:hover {
+      filter: brightness(0.8);
+    }
+    .header-container h1 {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 12px rgba(0,0,0,0.7);
+      animation: fadeInDown 1.2s ease forwards;
+    }
+
+    /* Navigasi */
+    nav {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 12px 22px;
+      background: #d0e8d6;
+      color: #1b5e20;
+      font-weight: 600;
+      font-size: 1.15rem;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(46,125,50,0.25);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #1b5e20;
+      color: #a5d6a7;
+      box-shadow: 0 6px 18px rgba(27,94,32,0.8);
+    }
+
+    /* Section umum */
+    section {
+      max-width: 900px;
+      margin: 0 auto 70px;
+      background: #ffffffcc;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(46,125,50,0.15);
+    }
+    section h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #2e7d32;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px #a5d6a7;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    section p, section ol {
+      text-align: justify;
+      font-size: 1.18rem;
+      color: #2c6b27;
+      line-height: 1.7;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    ol {
+      padding-left: 25px;
+      margin-top: 15px;
+    }
+    ol li {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .sub-kegiatan {
+      margin-bottom: 40px;
+    }
+    .sub-kegiatan h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #225522;
+      margin-bottom: 12px;
+      text-shadow: 0 0 6px #a5d6a7;
+      animation: fadeInLeft 1.3s ease forwards;
+    }
+
+    .foto {
+      width: 100%;
+      max-height: 280px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      object-fit: cover;
+      margin: 15px 0 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      animation: fadeInUp 1.4s ease forwards;
+    }
+    .foto:hover {
+      transform: scale(1.07);
+      box-shadow: 0 14px 40px rgba(27,94,32,0.5);
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      padding: 18px 10px;
+      background-color: #2e7d32;
+      color: white;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      font-weight: 600;
+    }
+
+    /* Animasi */
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    @keyframes fadeInLeft {
+      0% {opacity: 0; transform: translateX(-30px);}
+      100% {opacity: 1; transform: translateX(0);}
+    }
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsif */
+    @media(max-width: 768px) {
+      .header-container h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+      }
+      section {
+        padding: 25px 20px;
+      }
+      nav a {
+        font-size: 1rem;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="img/irma.jpg" alt="IRMA SMKN 2 Sukabumi" />
+      <h1>Selamat Datang di Website<br>IRMA SMKN 2 Sukabumi</h1>
+    </div>
+  </header>
+
+  <nav>
+  <a href="#sejarah">Sejarah IRMA</a>
+  <a href="#kegiatan">Kegiatan IRMA</a>
+  <a href="#struktur">Struktur</a>
+  <a href="#prestasi">Prestasi IRMA</a>
+  <a href="absensi.html" target="_blank">Absensi</a>
+  <a href="https://www.instagram.com/irma_smkn2sukabumi?igsh=ajdtajEwZTJxZjBj" target="_blank">
+    <i class="fab fa-instagram"></i> 
+    Sosial Media
+  </a>
+</nav>
+
+  <section id="sejarah">
+    <h2>Sejarah IRMA</h2>
+    <img src="img/sejarah-irma.jpg" alt="Foto Sejarah IRMA" class="foto" />
+    <p>Ikatan Remaja Masjid (IRMA) Jawa Barat dibentuk pada tanggal 18 Desember 2017 di Kota Bandung, dengan tujuan memberikan wadah bagi remaja untuk lebih aktif dan produktif dalam kegiatan positif, terutama yang terkait dengan masjid dan keagamaan. Pembentukan IRMA Jawa Barat dipicu oleh keprihatinan terhadap pergaulan remaja yang rentan terhadap hal-hal negatif.</p>
+  </section>
+
+  <section id="kegiatan">
+    <h2>Kegiatan IRMA</h2>
+
+    <div class="sub-kegiatan">
+      <h3>Hari Selasa: Musabaqah Syahril Qur'an (MHQ)</h3>
+      <img src="img/hari-selasa.jpg" alt="Kegiatan Hari Selasa MHQ" class="foto" />
+      <p>Setiap hari Selasa, anggota IRMA melaksanakan Musabaqah Syahril Qur'an sebagai ajang meningkatkan kemampuan membaca Al-Qur'an dengan baik dan benar.</p>
+    </div>
+
+    <div class="sub-kegiatan">
+      <h3>Hari Rabu: Musabaqah Tilawatil Qur'an</h3>
+      <img src="img/hari-rabu.jpg" alt="Kegiatan Hari Rabu MTQ" class="foto" />
+      <p>Hari Rabu diisi dengan Musabaqah Tilawatil Qur'an yang bertujuan mempererat kecintaan terhadap Al-Qur'an dan meningkatkan kualitas tilawah para remaja.</p>
+    </div>
+
+    <div class="sub-kegiatan">
+      <h3>Hari Kamis: Muhadarah dan Kumpul rutinan pengurus</h3>
+      <img src="img/hari-kamis.jpg" alt="Kegiatan Hari Kamis" class="foto" />
+      <p>Kegiatan Kamis adalah waktu khusus untuk muhadarah dan penguatan kepengurusan IRMA agar dapat berjalan efektif dan sesuai visi misi.</p>
+    </div>
+
+    <div class="sub-kegiatan">
+      <h3>Hari Jumat: Shalat duha, Tadarus, Tausiyah, Keputrian dan Pengembangan Minat, Bakat, dan Karakter</h3>
+      <img src="img/hari-jumat.jpg" alt="Kegiatan Hari Jumat" class="foto" />
+      <p>Kegiatan Jumat meliputi ibadah dhuha, tadarus Al-Qur'an, tausiyah, serta kegiatan pengembangan minat dan bakat khusus untuk pengurus keputrian dan seluruh anggota.</p>
+    </div>
+  </section>
+
+  <section id="prestasi">
+    <h2>Prestasi IRMA</h2>
+    <img src="img/prestasi-irma.jpg" alt="Foto Prestasi IRMA" class="foto" />
+    <ol>
+      <li>Juara 3 Lomba Profil IRMA Tingkat Provinsi Jawa Barat - 2023</li>
+      <li>Duta IT IRMA Jabar - 2023</li>
+      <li>Duta Musik Islami IRMA Jabar - 2023</li>
+      <li>Juara 1 Lomba LCCA Tingkat Kota dan Kabupaten Sukabumi - 2023</li>
+      <li>Juara 1 Lomba MTQ Tingkat Kota dan Kabupaten Sukabumi - 2023</li>
+      <li>Juara 1 Lomba Musik Islami Tingkat Kota dan Kabupaten Sukabumi - 2023</li>
+      <li>Juara 2 Lomba LCCA Tingkat Provinsi Jawa Barat - 2023</li>
+      <li>Juara 2 Lomba MTQ Tingkat Provinsi Jawa Barat - 2023</li>
+      <li>Juara 3 Lomba Profil IRMA Tingkat Provinsi Jawa Barat - 2024</li>
+    </ol>
+  </section>
+    </ol>
+  </section>
+
+  <section id="struktur">
+    <h2>Struktur Organisasi IRMA</h2>
+    <img src="img/struktur-irma.jpg" alt="Struktur Organisasi IRMA" class="foto" />
+    <p>Struktur organisasi IRMA terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, dan beberapa divisi yang bertugas sesuai bidangnya masing-masing demi kelancaran kegiatan organisasi.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 IRMA SMKN 2 Sukabumi - All rights reserved.
+  </footer>
+
+</body>
+</html>
